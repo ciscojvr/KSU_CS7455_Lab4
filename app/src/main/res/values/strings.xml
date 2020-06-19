@@ -3,4 +3,5 @@
     <string name="open_browser">Open Browser</string>
     <string name="trigger_intent">Trigger Intent</string>
     <string name="back">Back</string>
+    <string name="uh_oh_i_responded_to_a_browsing_intent">Uh Oh, I Responded to a Browsing Intent</string>
 </resources>
