@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CallIntentsApplication</string>
+    <string name="app_name">Lab4</string>
     <string name="open_browser">Open Browser</string>
     <string name="trigger_intent">Trigger Intent</string>
 </resources>
