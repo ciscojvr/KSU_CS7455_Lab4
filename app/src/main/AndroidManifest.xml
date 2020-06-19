@@ -21,10 +21,8 @@
         <activity android:name=".ActivityA">
             <intent-filter android:label="Activity A">
                 <action android:name="android.intent.action.VIEW"/>
-                <action android:name="myAction"/>
-                <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="myCategory"/>
+                <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="http"  android:host="developer.android.com"/>
             </intent-filter>
         </activity>
@@ -32,10 +30,8 @@
         <activity android:name=".ActivityB">
             <intent-filter android:label="Activity B">
                 <action android:name="android.intent.action.VIEW"/>
-                <action android:name="myAction"/>
-                <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="myCategory"/>
+                <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="http"  android:host="developer.android.com"/>
             </intent-filter>
         </activity>

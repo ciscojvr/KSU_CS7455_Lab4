@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button triggerIntentButton;
-    Intent intent;
+    Intent browserIntent;
     final String url = "http://developer.android.com";
 
     @Override
@@ -23,18 +23,15 @@ public class MainActivity extends AppCompatActivity {
         triggerIntentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-//                startActivity(intent);
-                intent = new Intent();
-                intent.setAction("myAction");
-                intent.addCategory("myCategory");
-                intent.putExtra("url", url);
-                intent.setData(Uri.parse(url));
 
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
+                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                browserIntent.putExtra("url", url);
+                browserIntent.setData(Uri.parse(url));
+
+                if (browserIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(browserIntent);
                 } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "No Activtiy is matched!", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(), "No Activity is matched!", Toast.LENGTH_SHORT);
                     toast.show();
                 }
 
